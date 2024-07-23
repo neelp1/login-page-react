@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import { Button, TextField, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-//import Stack from '@mui/material/Stack';
+import Container from '@mui/material/Container';
 
 const useStyles = makeStyles({
   paper: {
@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     width: '30%',
     padding: '30px',
     // display: "flex",
-    // flexDirection: "column",
+    flexDirection: "column",
     // justifyContent: "center"
   },
   form: {
@@ -33,6 +33,8 @@ function App() {
   };
 
   return (
+    <Container>
+      
       <Paper className={classes.paper}>
         <Typography variant="h4" align="center">Login</Typography>
         <form onSubmit={handleSubmit} className={classes.form}>
@@ -54,6 +56,7 @@ function App() {
           </Button>
         </form>
       </Paper>
+    </Container>
   );
 }
 
